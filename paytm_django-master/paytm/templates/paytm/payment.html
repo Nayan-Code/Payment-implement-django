@@ -1,0 +1,17 @@
+<div>
+  <h2> Please Do Not Refresh The Page !!!</h2><br>
+  <form method="post" action="{{ paytmurl }}" name="paytm">
+    <table border="1">
+      <tbody>
+        {% for key,value in paytmdict.items %}
+          {{key}}   ----- <input type="text" name="{{key}}" value="{{value}}"><br>   <!--Make it hiddden-->
+        {% endfor %}
+        <!-- <h2>{{ user }}</h2> -->
+      </tbody>
+    </table>
+    <!-- <button  type="submit" style="background-color:#00b9f5; border-color:#00b9f5;">Pay</button> -->
+    <script type="text/javascript">
+      document.paytm.submit();
+    </script>
+  </form>
+</div>
